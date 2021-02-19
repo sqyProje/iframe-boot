@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>乐器专区编辑</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--pages use plugins please write there-->
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <input type="hidden" name="classifyCode" value=""/><input type="hidden" name="videoUrl">
+                <input type="hidden" name="resourceScId"><input type="hidden" name="corverImageUrl">
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>封面图：</label>
+                    <div class="col-sm-2">
+                        <div class="picDiv editPic">
+                            <div class="addImages">
+                                <img style="" src="../images/defaultimg.png" width="100" height="100">
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="corverImage" id="corverImage" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>视频：</label>
+                    <div class="col-sm-5">
+                        <div class="picDiv editPic">
+                            <div class="addImages">
+                                <video src="" controls="controls" height="200" width="400"></video>
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="video" id="video" accept="video/*" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">副标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="subTitle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>价格：</label>
+                    <div class="col-sm-1">
+                        <input type="number" class="form-control input-sm textNone" name="amount" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">是否喜欢：</label>
+                    <div class="col-sm-1">
+                        <select name="isFavorite" class="form-control input-sm" >
+                            <option value="0">不喜欢</option>
+                            <option value="1">喜欢</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">描述文本：</label>
+                    <div class="col-sm-5">
+                        <textarea  class="form-control input-sm textNone" name="detailDesc"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>淘宝地址：</label>
+                    <div class="col-sm-5">
+                        <input  class="form-control input-sm textNone" name="taobaoUrl">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">微店地址：</label>
+                    <div class="col-sm-5">
+                        <input  class="form-control input-sm" name="weidianUrl">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href=''+pageObj.pageSource+'.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="DictionaryValueGet.ajaxForm('编辑',''+pageObj.pageSource+'','scManager')">保存</button>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script src="../js/fileupload.js"></script>
+<script>
+    $(function(){
+        $(".card-header").text(pageObj.headTitle)
+        $.ajax({
+            url:DictionaryValueGet.IPAddress+'/scManager/detail',
+            type:'post',
+            data:{resourceScId:pageObj.resourceScId},
+            dataType:'json',
+            success:function (result) {
+                $(".addImages img").attr('src',result.resource.imageUrl)
+                $(".addImages video").attr('src',result.resource.videoUrl)
+                $("input[name='corverImageUrl']").val(result.resource.imageUrl);
+                $("input[name='videoUrl']").val(result.resource.videoUrl);
+                $("input[name='resourceScId']").val(result.resource.resourceScId);
+                $("input[name='title']").val(result.resource.title);
+                $("input[name='subTitle']").val(result.resource.subTitle);
+                $("input[name='amount']").val(result.resource.amount);
+                $("textarea[name='detailDesc']").val(result.resource.detailDesc);
+                $("input[name='classifyCode']").val(result.resource.classifyCode);
+                $("select[name='isFavorite']").val(result.resource.isFavorite);
+                $("input[name='weidianUrl']").val(result.resource.weidianUrl);
+                $("input[name='taobaoUrl']").val(result.resource.taobaoUrl);
+            }
+        })
+
+    });
+</script>
+</body>
+</html>

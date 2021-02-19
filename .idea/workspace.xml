@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/kcManager/videoEdit.html" line="71" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e67d6b8d-7d6d-4f4d-a42e-9659c74dbeed" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="xxkcEdit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycManager/xxkcEdit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3078">
+              <caret line="162" column="28" lean-forward="false" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xieyi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mySelf/xieyi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xieyi2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mySelf/xieyi2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="66" column="32" lean-forward="true" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xxkc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycManager/xxkc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3363">
+              <caret line="177" column="15" lean-forward="true" selection-start-line="177" selection-start-column="15" selection-end-line="177" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="52" column="66" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfficialEdit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycManager/OfficialEdit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2242">
+              <caret line="118" column="76" lean-forward="false" selection-start-line="118" selection-start-column="68" selection-end-line="118" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wagfEdit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycManager/wagfEdit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3363">
+              <caret line="177" column="72" lean-forward="false" selection-start-line="177" selection-start-column="72" selection-end-line="177" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfficialAdd.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycManager/OfficialAdd.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2926">
+              <caret line="154" column="8" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="159" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Official.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycManager/Official.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3211">
+              <caret line="169" column="30" lean-forward="true" selection-start-line="169" selection-start-column="30" selection-end-line="169" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>原生伴奏</find>
+      <find>原生吉他</find>
+      <find>http://192.168.1.11:8082/pic/getPicPath</find>
+      <find>classifyCode</find>
+      <find>播放</find>
+      <find>userAuth</find>
+      <find>播放量</find>
+      <find>&lt;input  class=&quot;form-control input-sm textNone&quot; name=&quot;playTimes&quot;&gt;</find>
+      <find>setPhbResource</find>
+      <find>phb</find>
+      <find>/msmqManager/selectByPage</find>
+      <find>isVipResource</find>
+      <find>showTimeStart</find>
+      <find>showTime</find>
+      <find>addImages</find>
+      <find>嘉宾：</find>
+      <find>imageUrl2</find>
+      <find>image2</find>
+      <find>guest</find>
+      <find>getDayEveryDay</find>
+      <find>getDateRange</find>
+      <find>删除</find>
+      <find>pushNotice</find>
+      <find>intro</find>
+      <find>introduction textNone</find>
+      <find>introduction</find>
+      <find>时间</find>
+      <find>createTimeStr</find>
+      <find>测试DEMO</find>
+      <find>addBanner</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>scManager</replace>
+      <replace>原声伴奏</replace>
+      <replace>原声吉他</replace>
+      <replace>&lt;input type=&quot;number&quot; class=&quot;form-control input-sm textNone&quot; name=&quot;playTimes&quot; step=&quot;1&quot;&gt;</replace>
+      <replace>/noticeManager/selectByPage</replace>
+      <replace>introduction</replace>
+      <replace>指弹中国</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/kcManager/YSJTAdd.html" />
+        <option value="$PROJECT_DIR$/kcManager/YSJTEdit.html" />
+        <option value="$PROJECT_DIR$/userManager/userEdit.html" />
+        <option value="$PROJECT_DIR$/js/video.js" />
+        <option value="$PROJECT_DIR$/kcManager/videoEdit.html" />
+        <option value="$PROJECT_DIR$/qpManager/imageList.html" />
+        <option value="$PROJECT_DIR$/kcManager/YSJT.html" />
+        <option value="$PROJECT_DIR$/qpManager/ztqp.html" />
+        <option value="$PROJECT_DIR$/qpManager/ysbz.html" />
+        <option value="$PROJECT_DIR$/qpManager/ybsq.html" />
+        <option value="$PROJECT_DIR$/qpManager/tcqp.html" />
+        <option value="$PROJECT_DIR$/qpManager/gdqp.html" />
+        <option value="$PROJECT_DIR$/notice/msmqAdd.html" />
+        <option value="$PROJECT_DIR$/notice/noticeAdd.html" />
+        <option value="$PROJECT_DIR$/notice/details.html" />
+        <option value="$PROJECT_DIR$/mySelf/yinsi.html" />
+        <option value="$PROJECT_DIR$/mySelf/xieyi.html" />
+        <option value="$PROJECT_DIR$/qpManager/gdqpAdd.html" />
+        <option value="$PROJECT_DIR$/qpManager/tcqpAdd.html" />
+        <option value="$PROJECT_DIR$/qpManager/ztqpAdd.html" />
+        <option value="$PROJECT_DIR$/ycManager/wagfAdd.html" />
+        <option value="$PROJECT_DIR$/qpManager/gdqpEdit.html" />
+        <option value="$PROJECT_DIR$/qpManager/ybsqEdit.html" />
+        <option value="$PROJECT_DIR$/qpManager/ysbzEdit.html" />
+        <option value="$PROJECT_DIR$/qpManager/ztqpEdit.html" />
+        <option value="$PROJECT_DIR$/qpManager/ybsqAdd.html" />
+        <option value="$PROJECT_DIR$/qpManager/ysbzAdd.html" />
+        <option value="$PROJECT_DIR$/aa.html" />
+        <option value="$PROJECT_DIR$/vv.html" />
+        <option value="$PROJECT_DIR$/js/dictionaryValue.js" />
+        <option value="$PROJECT_DIR$/ycManager/OfficialAdd.html" />
+        <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/ycManager/Official.html" />
+        <option value="$PROJECT_DIR$/ycManager/wagf.html" />
+        <option value="$PROJECT_DIR$/qpManager/tcqpEdit.html" />
+        <option value="$PROJECT_DIR$/userManager/user.html" />
+        <option value="$PROJECT_DIR$/notice/notice.html" />
+        <option value="$PROJECT_DIR$/pinglun/dt.html" />
+        <option value="$PROJECT_DIR$/pinglun/kc.html" />
+        <option value="$PROJECT_DIR$/pinglun/qp.html" />
+        <option value="$PROJECT_DIR$/pinglun/yc.html" />
+        <option value="$PROJECT_DIR$/ycManager/rmxyAdd.html" />
+        <option value="$PROJECT_DIR$/ycManager/rmxyEdit.html" />
+        <option value="$PROJECT_DIR$/ycManager/xxkcAdd.html" />
+        <option value="$PROJECT_DIR$/ycManager/xxkcEdit.html" />
+        <option value="$PROJECT_DIR$/ycManager/rmxy.html" />
+        <option value="$PROJECT_DIR$/ycManager/xxkc.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/ycManager/OfficialEdit.html" />
+        <option value="$PROJECT_DIR$/ycManager/wagfEdit.html" />
+        <option value="$PROJECT_DIR$/mySelf/xieyi2.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-18" />
+    <option name="y" value="165" />
+    <option name="width" value="1856" />
+    <option name="height" value="949" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType ProjectPane="true" />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="iframe-bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iframe-bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iframe-bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iframe-bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="mySelf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iframe-bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iframe-bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="ycManager" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-excluded-files" value="false" />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iframe-bootstrapdelete" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\sqy\iframe-bootstrap\mySelf" />
+      <recent name="H:\sqy\iframe-bootstrap\js\bootstrap-datepicker" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\sqy\iframe-bootstrap\mySelf" />
+      <recent name="H:\sqy\iframe-bootstrap\pinglun" />
+      <recent name="H:\sqy\iframe-bootstrap" />
+      <recent name="H:\sqy\iframe-bootstrap\notice" />
+      <recent name="H:\sqy\iframe-bootstrap\qpManager" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e67d6b8d-7d6d-4f4d-a42e-9659c74dbeed" name="Default" comment="" />
+      <created>1576118959992</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576118959992</updated>
+      <workItem from="1576118961282" duration="3516000" />
+      <workItem from="1576199665172" duration="1218000" />
+      <workItem from="1576208691382" duration="692000" />
+      <workItem from="1576285329242" duration="4342000" />
+      <workItem from="1576302059211" duration="2812000" />
+      <workItem from="1576460169467" duration="1712000" />
+      <workItem from="1576633659078" duration="799000" />
+      <workItem from="1576748344960" duration="845000" />
+      <workItem from="1576805056043" duration="844000" />
+      <workItem from="1577063693851" duration="5656000" />
+      <workItem from="1577149355953" duration="16107000" />
+      <workItem from="1577236076257" duration="5710000" />
+      <workItem from="1577258132702" duration="7482000" />
+      <workItem from="1577324856246" duration="18157000" />
+      <workItem from="1577409973927" duration="18964000" />
+      <workItem from="1577498005518" duration="605000" />
+      <workItem from="1577668818043" duration="3786000" />
+      <workItem from="1577689791534" duration="3952000" />
+      <workItem from="1577755197913" duration="15405000" />
+      <workItem from="1577840955789" duration="12386000" />
+      <workItem from="1577928535561" duration="15352000" />
+      <workItem from="1578013476473" duration="13092000" />
+      <workItem from="1578273371870" duration="6509000" />
+      <workItem from="1578295423240" duration="7279000" />
+      <workItem from="1578365022725" duration="1885000" />
+      <workItem from="1578375232711" duration="4656000" />
+      <workItem from="1578386946833" duration="819000" />
+      <workItem from="1578445377579" duration="1896000" />
+      <workItem from="1578732211236" duration="1930000" />
+      <workItem from="1578878291684" duration="15635000" />
+      <workItem from="1578964602875" duration="6918000" />
+      <workItem from="1583658683058" duration="896000" />
+      <workItem from="1583716167348" duration="71000" />
+      <workItem from="1584343264576" duration="1494000" />
+      <workItem from="1586221828895" duration="14893000" />
+      <workItem from="1586395241840" duration="6615000" />
+      <workItem from="1586481240453" duration="286000" />
+      <workItem from="1586756999237" duration="5398000" />
+      <workItem from="1587541946805" duration="689000" />
+      <workItem from="1587714410014" duration="3429000" />
+      <workItem from="1588753145502" duration="2859000" />
+      <workItem from="1588817984084" duration="3113000" />
+      <workItem from="1588900493862" duration="5442000" />
+      <workItem from="1588989030660" duration="2777000" />
+      <workItem from="1589159365208" duration="4529000" />
+      <workItem from="1589337272622" duration="818000" />
+      <workItem from="1589338208370" duration="774000" />
+      <workItem from="1589339477339" duration="1652000" />
+      <workItem from="1589350123924" duration="1377000" />
+      <workItem from="1589353747840" duration="1759000" />
+      <workItem from="1589418571650" duration="1877000" />
+      <workItem from="1590194880046" duration="2796000" />
+      <workItem from="1591089602880" duration="1548000" />
+      <workItem from="1591340976054" duration="1015000" />
+      <workItem from="1591406477893" duration="3507000" />
+      <workItem from="1591577880194" duration="978000" />
+      <workItem from="1591862720979" duration="2280000" />
+      <workItem from="1591954959774" duration="474000" />
+      <workItem from="1592300374387" duration="1289000" />
+      <workItem from="1592447689167" duration="11000" />
+      <workItem from="1592796795704" duration="5399000" />
+      <workItem from="1593855636419" duration="342000" />
+      <workItem from="1594277473753" duration="3076000" />
+      <workItem from="1594602954072" duration="7202000" />
+      <workItem from="1595216704836" duration="3253000" />
+      <workItem from="1595379934978" duration="1189000" />
+      <workItem from="1595466255436" duration="3033000" />
+      <workItem from="1595552908242" duration="1198000" />
+      <workItem from="1595811769476" duration="1241000" />
+      <workItem from="1595902397696" duration="3375000" />
+      <workItem from="1596080057210" duration="620000" />
+      <workItem from="1596272494159" duration="243000" />
+      <workItem from="1596418019026" duration="3710000" />
+      <workItem from="1596706882206" duration="260000" />
+      <workItem from="1597626187579" duration="2415000" />
+      <workItem from="1597734616416" duration="643000" />
+      <workItem from="1597830644091" duration="313000" />
+      <workItem from="1597976497047" duration="19000" />
+      <workItem from="1598145310836" duration="7097000" />
+      <workItem from="1598175796000" duration="91000" />
+      <workItem from="1598232186369" duration="12000" />
+      <workItem from="1598336894287" duration="6000" />
+      <workItem from="1598405024968" duration="7000" />
+      <workItem from="1598858861588" duration="688000" />
+      <workItem from="1603096774320" duration="1029000" />
+      <workItem from="1605509185299" duration="3124000" />
+      <workItem from="1605574825238" duration="176000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="325368000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15595363" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="820" y="58" width="280" height="923" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09720786" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/kcManager/videoEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="81" column="99" lean-forward="false" selection-start-line="81" selection-start-column="99" selection-end-line="81" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/imageList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="187" column="9" lean-forward="false" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kcManager/YSJT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="176" column="117" lean-forward="true" selection-start-line="176" selection-start-column="117" selection-end-line="176" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ztqp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="219" column="64" lean-forward="false" selection-start-line="219" selection-start-column="64" selection-end-line="219" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ysbz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="219" column="64" lean-forward="false" selection-start-line="219" selection-start-column="64" selection-end-line="219" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ybsq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="219" column="64" lean-forward="false" selection-start-line="219" selection-start-column="64" selection-end-line="219" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/tcqp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="220" column="64" lean-forward="false" selection-start-line="220" selection-start-column="64" selection-end-line="220" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/gdqp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="228" column="25" lean-forward="true" selection-start-line="228" selection-start-column="25" selection-end-line="228" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mySelf/ztdsjAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notice/noticeAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notice/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="69" column="6" lean-forward="false" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mySelf/yinsi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="221" column="32" lean-forward="true" selection-start-line="221" selection-start-column="32" selection-end-line="221" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mySelf/code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ztqpAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/tcqpAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="51" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ybsqEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2679">
+          <caret line="141" column="74" lean-forward="false" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ysbzEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="140" column="74" lean-forward="false" selection-start-line="140" selection-start-column="74" selection-end-line="140" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ztqpEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3021">
+          <caret line="159" column="7" lean-forward="false" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/gdqpAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/ybsqAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="53" column="59" lean-forward="false" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vv.html" />
+    <entry file="file://$PROJECT_DIR$/aa.html" />
+    <entry file="file://$PROJECT_DIR$/qpManager/ysbzAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kcManager/SBBY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dictionaryValue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/wagfAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2356">
+          <caret line="124" column="82" lean-forward="false" selection-start-line="124" selection-start-column="70" selection-end-line="124" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/gdqpEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/tcqpEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManager/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notice/notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="105" column="13" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qpManager/banner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinglun/dt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2451">
+          <caret line="129" column="29" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="130" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinglun/kc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2470">
+          <caret line="130" column="75" lean-forward="false" selection-start-line="130" selection-start-column="75" selection-end-line="130" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinglun/qp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2489">
+          <caret line="131" column="75" lean-forward="false" selection-start-line="131" selection-start-column="75" selection-end-line="131" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinglun/yc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="140" column="16" lean-forward="true" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/rmxyAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="101" column="15" lean-forward="false" selection-start-line="101" selection-start-column="15" selection-end-line="106" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/rmxyEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="101" column="16" lean-forward="false" selection-start-line="101" selection-start-column="16" selection-end-line="106" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/xxkcAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="105" column="22" lean-forward="false" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/wagf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="162" column="14" lean-forward="false" selection-start-line="162" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/rmxy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3401">
+          <caret line="179" column="18" lean-forward="false" selection-start-line="177" selection-start-column="11" selection-end-line="179" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/xxkc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3363">
+          <caret line="177" column="15" lean-forward="true" selection-start-line="177" selection-start-column="15" selection-end-line="177" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="66" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/Official.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3211">
+          <caret line="169" column="30" lean-forward="true" selection-start-line="169" selection-start-column="30" selection-end-line="169" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/OfficialAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2926">
+          <caret line="154" column="8" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="159" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/OfficialEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2242">
+          <caret line="118" column="76" lean-forward="false" selection-start-line="118" selection-start-column="68" selection-end-line="118" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/wagfEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3363">
+          <caret line="177" column="72" lean-forward="false" selection-start-line="177" selection-start-column="72" selection-end-line="177" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycManager/xxkcEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="162" column="28" lean-forward="false" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mySelf/xieyi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mySelf/xieyi2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="66" column="32" lean-forward="true" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

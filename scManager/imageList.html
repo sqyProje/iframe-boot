@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>商品图片资源</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">商品图片资源</div>
+        <div class="card-body">
+            <div class="toolbar-btn-action margin-t-10 margin-b-10">
+                <button class="btn btn-warning m-r-5" type="button" onclick="window.location.href=pageObj.pageSource+'.html'">返回上一级</button>
+            </div>
+            <table id="table-content"></table>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">预览</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" alt="">
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/bootstrap-table/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/fileupload.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+
+<script>
+    $(function () {
+        $("input[name='resourceScId']").val(pageObj.resourceScId)
+         InitTable();
+    });
+    // 列表加载 ,查询需要的参数
+    function InitTable() {
+        $('#table-content').bootstrapTable('destroy')
+        $('#table-content').bootstrapTable({
+            url: DictionaryValueGet.IPAddress+"/scManager/detail",
+            method: 'post',                      //请求方式（*）
+            contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+            Accept: 'application/json, text/javascript',
+            pageNumber:(pageObj.pageNumber== null || pageObj.pageNumber == "undefined") ? 1 : Number(pageObj.pageNumber), //初始化加载第一页，默认第一页
+            clickToSelect: true, //是否启用点击选中行
+            pagination: false,
+            paginationShowPageGo: true,
+            pageSize: 10,
+            pageList: [10, 20, 30, 40, 50],
+            dataField: "data", //这是返回的json数组的key.默认好像是"rows".这里只有前后端约定好就行
+            queryParams: queryParams, //请求服务器时所传的参数
+            responseHandler:function(result) {
+                return{
+                    data: result.imageList
+                }
+            }, //请求数据成功后，渲染表格前的方法
+            onLoadError: function(){  //加载失败时执行
+                $.toast({
+                    text: '数据加载失败',
+                    icon: 'error',
+                    bgColor: '#dd4b39',
+                    textColor: 'white',
+                    position:'top-center'
+                })
+            },
+            columns: [{
+                checkbox: true
+            },{
+                field: 'imageUrl',
+                title: '图片',
+                align: 'center',
+                formatter:function (value) {
+                    return '<img src="'+value+'" height="36" width="46"  data-toggle="modal" data-target="#myModal" onclick="addBanner(\''+value+'\')" />'
+                }
+            }
+            ,{
+                field: 'orderNum',
+                title: '顺序',
+                align: 'center'
+            },{
+                field: 'Operation',
+                title: '操作',
+                align: 'center',
+                formatter: function (value, row, index) {
+                    var pageNumber = $('#table-content').bootstrapTable("getOptions").pageNumber;
+                    var contStr='<div>';
+                        contStr+= '<a  class=" label label-danger" onclick="deleteUserList(\''+row.id+'\')" href="javascript:;">删除</a>'+
+                        '</div>';
+                        return contStr
+                }
+        }]
+    })
+    }
+    //请求服务数据时所传参数
+    function queryParams(params) {
+        return {
+            resourceScId:pageObj.resourceScId,
+        }
+    }
+    //单行删除
+    function deleteUserList(id) {
+        bootbox.confirm({
+            size: "small",
+            message: "确定删除吗？",
+            buttons: {
+                confirm: {
+                    label: '是',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '否',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function(result) {
+                if (result) {
+                    $.ajax({
+                        url: DictionaryValueGet.IPAddress+"/scManager/deleteImage",
+                        type: "post",
+                        data: {id: id},
+                        dataType:'json',
+                        success: function (data) {
+                            if(data.status == 1){
+                                $("#table-content").bootstrapTable('refresh', {url: DictionaryValueGet.IPAddress+'/scManager/detail'});
+                                $.toast({
+                                    text: '删除成功.',
+                                    icon: 'success',
+                                    bgColor: '#00a65a',
+                                    textColor: 'white',
+                                    position:'mid-center'
+                                })
+                            }else{
+                                $.toast({
+                                    text: data.msg,
+                                    icon: 'error',
+                                    bgColor: '#a63010',
+                                    textColor: 'white',
+                                    position:'mid-center'
+                                })
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }
+    function addBanner(srcImg) {
+        $(".modal-body img").attr('src',srcImg)
+    }
+</script>
+</body>
+</html>

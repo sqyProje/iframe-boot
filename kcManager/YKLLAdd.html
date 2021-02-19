@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>尤克里里添加</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">尤克里里添加</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <input type="hidden" name="mainClassifyCode" value="YKLL"/>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>图片：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv">
+                            <div class="addImages">
+                                <input type="file" class="file textNone" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                <div class="text-detail">
+                                    <span>+</span>
+                                    <div>点击上传</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">副标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="subTitle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>购买价格：</label>
+                    <div class="col-sm-1">
+                        <input type="number" class="form-control input-sm textNone" name="generalBuyPrice" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">难易程度：</label>
+                    <div class="col-sm-1">
+                        <input type="number"  class="form-control input-sm" name="difficulteDegree" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">活动类型：</label>
+                    <div class="col-sm-1">
+                        <select name="subClassifyCode" class="form-control input-sm" >
+                            <option value="">全部</option>
+                            <option value="ZT">指弹</option>
+                            <option value="TC">弹唱</option>
+                            <option value="JQYL">技巧乐理</option>
+                            <option value="XTTK">系统套课</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">是否VIP：</label>
+                    <div class="col-sm-2">
+                        <select name="isVipResource" class="form-control input-sm">
+                            <option value="false">否</option>
+                            <option value="true">是</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">播放次数：</label>
+                    <div class="col-sm-2">
+                        <input  class="form-control input-sm" name="playTimes">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>简介：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control textNone" name="introduction" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='YKLL.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="DictionaryValueGet.ajaxForm('添加','YKLL','kcManager')">保存</button>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script src="../js/fileupload.js"></script>
+<script>
+    $(function(){
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>原声伴奏编辑</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--pages use plugins please write there-->
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">原声伴奏编辑</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <input type="hidden" name="resourceScId"/>
+                <input type="hidden" name="classifyCode"/><input type="hidden" name="imageUrl2"/><input type="hidden" name="imageUrl"/><input type="hidden" name="musicUrl"/>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>图片：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv editPic">
+                            <div class="addImages imgageone">
+                                <img class="image" src="../images/defaultimg.png" width="100" height="100">
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>封面：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv editPic">
+                            <div class="addImages imgageone">
+                                <img class="image2" src="../images/defaultimg.png" width="100" height="100">
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="image2" id="image2" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label">音频：</label>
+                    <div class="col-sm-10 ">
+                        <div class="picDiv edityinpin editPic">
+                            <div class="addImages">
+                                <audio controls="controls"> your browser does not support the audio tag </audio>
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>\n' +
+                                    <input type="file" class="file" name="music" id="music" accept="audio/*" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">副标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="subTitle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>购买价格：</label>
+                    <div class="col-sm-1">
+                        <input type="number" class="form-control input-sm textNone" name="generalBuyPrice" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">弹唱曲谱：</label>
+                    <div class="col-sm-1">
+                        <select name="subClassifyCode" class="form-control input-sm" >
+                            <option value="JT">吉他Guitar</option>
+                            <option value="YKLL">尤克里里</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">是否VIP：</label>
+                    <div class="col-sm-1">
+                        <select name="isVipResource" class="form-control input-sm">
+                            <option value="false">否</option>
+                            <option value="true">是</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">播放次数：</label>
+                    <div class="col-sm-1">
+                        <input type="number" class="form-control input-sm textNone" name="playTimes" step="1">
+                    </div>
+                    <label class=" col-sm-1 control-label">作者：</label>
+                    <div class="col-sm-1">
+                        <input  class="form-control input-sm textNone" name="author">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='ysbz.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="DictionaryValueGet.ajaxForm('编辑','ysbz','qpManager')">保存</button>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script src="../js/fileupload.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:DictionaryValueGet.IPAddress+'/qpManager/detail',
+            type:'post',
+            data:{resourceId:pageObj.resourceId},
+            dataType:'json',
+            success:function (result) {
+                $(".addImages .image").attr('src',result.resource.imageUrl)
+                $(".addImages .image2").attr('src',result.resource.imageUrl2)
+                $(".addImages audio").attr('src',result.resource.musicUrl)
+                $("input[name='imageUrl']").val(result.resource.imageUrl);
+                $("input[name='imageUrl2']").val(result.resource.imageUrl2);
+                $("input[name='musicUrl']").val(result.resource.musicUrl);
+                $("input[name='resourceScId']").val(result.resource.resourceScId);
+                $("input[name='title']").val(result.resource.title);
+                $("input[name='subTitle']").val(result.resource.subTitle);
+                $("input[name='generalBuyPrice']").val(result.resource.generalBuyPrice);
+                $("input[name='createTimeStr']").val(result.resource.createTimeStr);
+                $("input[name='classifyCode']").val(result.resource.classifyCode);
+                $("select[name='subClassifyCode']").val(result.resource.subClassifyCode);
+                $("input[name='difficulteDegree']").val(result.resource.difficulteDegree);
+                $("select[name='isVipResource'] option[value='"+result.resource.isVipResource+"']").attr("selected", "selected");
+                $("input[name='author']").val(result.resource.author);
+                $("input[name='playTimes']").val(result.resource.playTimes);
+            }
+        })
+    });
+</script>
+</body>
+</html>

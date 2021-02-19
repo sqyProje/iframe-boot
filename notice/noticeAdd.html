@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>消息管理添加</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">消息管理添加</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>内容：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control input-sm textNone" name="desc"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">推送地址：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control input-sm " name="pushUrl"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='notice.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="ajaxForm()">保存</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script>
+    function ajaxForm() {
+        var textNone = $(".textNone");
+        var flag = true;
+        for(var i=0; i<textNone.length; i++){
+            if($(textNone[i]).val() === ""){
+                flag = false;
+                alert("*必填项不能为空")
+                break ;
+            }
+        }
+        if(flag == true ){
+            $.ajax({
+                url:DictionaryValueGet.IPAddress+'/noticeManager/add',
+                type : "POST",
+                data:{
+                    title:$("input[name='title']").val(),
+                    desc:$("textarea[name='desc']").val(),
+                    pushUrl:$("textarea[name='pushUrl']").val()
+                },
+                success : function(data) {
+                    if(data.status===1){
+                        $.toast({
+                            text: '添加成功',
+                            icon: 'success',
+                            bgColor: '#00a65a',
+                            textColor: 'white',
+                            position:'mid-center',
+                            afterHidden: function () {
+                                window.location.href ='notice.html?pageNumber='+pageObj.pageNumber;
+                            }
+                        })
+                    }else{
+                        alert(data.errMsg)
+                    }
+                }
+            })
+        }
+
+
+    }
+</script>
+</body>
+</html>

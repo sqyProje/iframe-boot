@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>设备保养</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">设备保养</div>
+        <div class="card-body">
+            <div class="form-inline">
+                <div class="form-group margin-r-30">
+                    <label>关键字：</label>
+                    <input type="text" name="keyWord" class="form-control input-sm" autocomplete="off">
+                </div>
+                <div class="form-group margin-r-30">
+                    <label>课程分类：</label>
+                    <select name="subClassifyCode" class="form-control input-sm" >
+                        <option value="">全部</option>
+                        <option value="ZBKC">周边课程</option>
+                        <option value="WXBY">维修保养</option>
+                    </select>
+                </div>
+                <div class="form-group margin-r-30">
+                    <label>排行榜：</label>
+                    <select name="kcPhb" class="form-control input-sm" >
+                        <option value="">全部</option>
+                        <option value="0">否</option>
+                        <option value="1">是</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info m-r-5" id="searchBtn">查询</button>
+                </div>
+            </div>
+            <div class="toolbar-btn-action margin-t-10 margin-b-10">
+                <button class="btn btn-primary m-r-5" onclick="window.location.href='SBBYAdd.html'">添加</button>
+            </div>
+            <table id="table-content"></table>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">添加</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="resourceId" value=""/>
+                        <div class="form-group ">
+                            <label class=" col-sm-2 control-label"><span class="text-danger">*</span>图片：</label>
+                            <div class="col-sm-10">
+                                <div class="picDiv">
+                                    <div class="addImages">
+                                        <input type="file" class="file textNone" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                        <div class="text-detail">
+                                            <span>+</span>
+                                            <div>点击上传</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" col-sm-2 control-label"><span class="text-danger">*</span>排序：</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control input-sm textNone" name="order">
+                            </div>
+                        </div>
+                        <div id="progress"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success  margin-r-10" type="button" data-dismiss="modal">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="DictionaryValueGet.addBannerAjaxForm('kcManager')">保存</button>
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/bootstrap-table/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/fileupload.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+
+<script>
+    $(function () {
+         InitTable();
+    });
+    // 列表加载 ,查询需要的参数
+    function InitTable() {
+        $('#table-content').bootstrapTable('destroy')
+        $('#table-content').bootstrapTable({
+            url: DictionaryValueGet.IPAddress+"/kcManager/selectByPage",
+            method: 'post',                      //请求方式（*）
+            contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+            Accept: 'application/json, text/javascript',
+            sidePagination: "server", //分页方式：client客户端分页，server服务端分页（*）
+            pageNumber:(pageObj.pageNumber== null || pageObj.pageNumber == "undefined") ? 1 : Number(pageObj.pageNumber), //初始化加载第一页，默认第一页
+            clickToSelect: true, //是否启用点击选中行
+            pagination: true,
+            paginationShowPageGo: true,
+            pageSize: 10,
+            pageList: [10, 20, 30, 40, 50],
+            dataField: "data", //这是返回的json数组的key.默认好像是"rows".这里只有前后端约定好就行
+            queryParams: queryParams, //请求服务器时所传的参数
+            responseHandler: DictionaryValueGet.responseHandler, //请求数据成功后，渲染表格前的方法
+            onLoadError: function(){  //加载失败时执行
+                $.toast({
+                    text: '数据加载失败',
+                    icon: 'error',
+                    bgColor: '#dd4b39',
+                    textColor: 'white',
+                    position:'top-center'
+                })
+            },
+            columns: [{
+                checkbox: true
+            },
+            {
+                field: 'title',
+                title: '标题',
+                align: 'center'
+            },{
+                field: 'subTitle',
+                title: '副标题',
+                align: 'center'
+            },{
+                field: 'subClassifyCode',
+                title: '活动类型',
+                align: 'center',
+                formatter:function (value) {
+                    if(value === 'ZBKC'){
+                        return '<span>周边课程</span>'
+                    }else if(value === 'WXBY'){
+                        return '<span>维修保养</span>'
+                    }
+                }
+            },{
+                field: 'generalBuyPrice',
+                title: '购买价格（元）',
+                align: 'center'
+            },{
+                field: 'playTimes',
+                title: '播放次数',
+                align: 'center'
+            },{
+                field: 'kcPhb',
+                title: '排行榜',
+                align: 'center',
+                formatter: function (value, row) {
+                    if(value===0){
+                        return '<a  class=" label label-danger" onclick="setPhbResource(\''+row.resourceKcId+'\',\''+1+'\')">否</a>'
+                    }else{
+                        return '<a  class=" label label-success" onclick="setPhbResource(\''+row.resourceKcId+'\',\''+0+'\')">是</a>'
+                    }
+                }
+            },{
+                field: 'createTimeStr',
+                title: '创建时间',
+                align: 'center'
+            },{
+                field: 'Operation',
+                title: '操作',
+                align: 'center',
+                formatter: function (value, row, index) {
+                    var pageNumber = $('#table-content').bootstrapTable("getOptions").pageNumber;
+                    var contStr='<div>';
+                        contStr+='<a  class="label label-primary margin-r-20" href="SBBYEdit.html?resourceId='+row.resourceKcId+'&pageNumber='+pageNumber+'">编辑</a>'+
+                            '<a  class="label label-warning margin-r-20"  data-toggle="modal" data-target="#myModal" onclick="DictionaryValueGet.addBanner(\''+row.resourceKcId+'\')">添加轮播图</a>'+
+                        '<a  class="label label-success margin-r-20" href="videoList.html?resourceId='+row.resourceKcId+'&mainClassifyCode='+row.mainClassifyCode+'' +
+                            '&pageSource=SBBY">视频资源</a>'+
+                        '<a  class=" label label-danger" onclick="deleteUserList(\''+row.resourceKcId+'\')" href="javascript:;">删除</a>'+
+                        '</div>';
+                        return contStr
+                }
+        }]
+    })
+    }
+    //请求服务数据时所传参数
+    function queryParams(params) {
+        return {
+            pageSize: params.limit, //每一页的数据行数，默认是上面设置的10(pageSize)
+            pageNo: params.offset / params.limit + 1, //当前页面,默认是上面设置的1(pageNumber)
+            mainClassifyCode:'SBBY',
+            keyWord:$("input[name='keyWord']").val(),
+            subClassifyCode:$("select[name='subClassifyCode'] option:selected").val(),
+            kcPhb:$("select[name='kcPhb'] option:selected").val()
+        }
+    }
+    //查询按钮事件
+    $('#searchBtn').click(function () {
+        $('#table-content').bootstrapTable('refresh', {
+            silent: true,
+            pageNumber: 1
+        });
+    });
+    //单行删除
+    function deleteUserList(id) {
+        bootbox.confirm({
+            size: "small",
+            message: "确定删除吗？",
+            buttons: {
+                confirm: {
+                    label: '是',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '否',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function(result) {
+                if (result) {
+                    $.ajax({
+                        url: DictionaryValueGet.IPAddress+"/kcManager/delete",
+                        type: "post",
+                        data: {resourceKcId: id},
+                        dataType:'json',
+                        success: function (data) {
+                            if(data.status == 1){
+                                $("#table-content").bootstrapTable('refresh', {url: DictionaryValueGet.IPAddress+'/kcManager/selectByPage'});
+                                $.toast({
+                                    text: '删除成功.',
+                                    icon: 'success',
+                                    bgColor: '#00a65a',
+                                    textColor: 'white',
+                                    position:'mid-center'
+                                })
+                            }else{
+                                $.toast({
+                                    text: data.msg,
+                                    icon: 'error',
+                                    bgColor: '#a63010',
+                                    textColor: 'white',
+                                    position:'mid-center'
+                                })
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }
+    function setPhbResource(id,kcPhb) {
+        $.ajax({
+            url: DictionaryValueGet.IPAddress+"/kcManager/setPhbResource",
+            type: "post",
+            data: {resourceKcId: id,kcPhb:kcPhb},
+            dataType:'json',
+            success: function (data) {
+                if(data.status == 1){
+                    $("#table-content").bootstrapTable('refresh', {url: DictionaryValueGet.IPAddress+'/kcManager/selectByPage'});
+                }else{
+                    $.toast({
+                        text: data.msg,
+                        icon: 'error',
+                        bgColor: '#a63010',
+                        textColor: 'white',
+                        position:'mid-center'
+                    })
+                }
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

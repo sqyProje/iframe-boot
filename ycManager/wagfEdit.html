@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>官方活动编辑</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--pages use plugins please write there-->
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">官方活动编辑</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" method="post" autocomplete="off"  >
+                <input type="hidden" name="resourceId"/>
+                <input type="hidden" name="classifyCode"/><input type="hidden" name="imageUrl"/><input type="hidden" name="imageUrl2"/><input type="hidden" name="videoUrl"/>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>图片预览：</label>
+                    <div class="col-sm-2">
+                        <div class="picDiv editPic">
+                            <div class="addImages">
+                                <img class="image" src="../images/defaultimg.png" width="100" height="100">
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>封面：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv editPic">
+                            <div class="addImages imgageone">
+                                <img class="image2" src="../images/defaultimg.png" width="100" height="100">
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="image2" id="image2" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>视频预览：</label>
+                    <div class="col-sm-2">
+                        <div class="picDiv editPic">
+                            <div class="addImages">
+                                <video src="" controls="controls" height="200" width="400"></video>
+                                <div class="text-detail btn-warning">
+                                    <div>重新上传</div>
+                                    <input type="file" class="file" name="video" id="video" accept="video/*" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">副标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="subTitle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">地址：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>购买价格：</label>
+                    <div class="col-sm-1">
+                        <input type="number" class="form-control input-sm textNone" name="generalBuyPrice" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">难易程度：</label>
+                    <div class="col-sm-1">
+                        <input type="number"  class="form-control input-sm" name="difficulteDegree" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">活动类型：</label>
+                    <div class="col-sm-1">
+                        <select name="subClassifyCode" class="form-control input-sm" >
+                            <option value="YYJ">音乐节</option>
+                            <option value="WAGFZTDS">比赛</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">是否VIP：</label>
+                    <div class="col-sm-1">
+                        <select name="isVipResource" class="form-control input-sm">
+                            <option value="false">否</option>
+                            <option value="true">是</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">播放次数：</label>
+                    <div class="col-sm-1">
+                        <input  class="form-control input-sm" name="playTimes">
+                    </div>
+                    <label class=" col-sm-1 control-label">演出时间：</label>
+                    <div class="col-sm-1">
+                        <input  class="form-control input-sm" name="showTime">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>简介：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control textNone" name="introduction" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">嘉宾：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control" name="guest" rows="4"></textarea>
+                        <span>多个嘉宾用逗号分开（周杰伦，罗志祥）</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='Official.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="DictionaryValueGet.ajaxForm('编辑','wagf','ycManager')">保存</button>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script src="../js/fileupload.js"></script>
+<script>
+    $(function(){
+        $("input[name='showTime']").datepicker({
+            language: 'zh-CN', //语言
+            autoclose: true, //选择后自动关闭
+            clearBtn: true,//清除按钮
+            format: "yyyy-mm-dd"//日期格式
+        });
+        $.ajax({
+            url:DictionaryValueGet.IPAddress+'/ycManager/detail',
+            type:'post',
+            data:{resourceId:pageObj.resourceId},
+            dataType:'json',
+            success:function (result) {
+                $(".addImages .image").attr('src',result.resource.imageUrl)
+                $(".addImages .image2").attr('src',result.resource.imageUrl2)
+                $("input[name='imageUrl2']").val(result.resource.imageUrl2);
+                $(".addImages video").attr('src',result.resource.videoUrl)
+                $("input[name='imageUrl']").val(result.resource.imageUrl);
+                $("input[name='videoUrl']").val(result.resource.videoUrl);
+                $("input[name='resourceId']").val(result.resource.resourceId);
+                $("input[name='title']").val(result.resource.title);
+                $("input[name='subTitle']").val(result.resource.subTitle);
+                $("input[name='generalBuyPrice']").val(result.resource.generalBuyPrice);
+                $("input[name='showTime']").val(result.resource.showTime);
+                $("input[name='classifyCode']").val(result.resource.classifyCode);
+                $("textarea[name='introduction']").val(result.resource.introduction);
+                $("textarea[name='guest']").val(result.resource.guest);
+                $("select[name='subClassifyCode']").val(result.resource.subClassifyCode);1
+
+                $("input[name='difficulteDegree']").val(result.resource.difficulteDegree);
+                $("input[name='isVipResource']").val(result.resource.isVipResource);
+                $("input[name='playTimes']").val(result.resource.playTimes);
+                $("input[name='address']").val(result.resource.address);
+            }
+        })
+
+    });
+
+    //添加提交
+    function ajaxForm() {
+        var FormBody= $("#form-body")[0]
+        var FormDataQuery = new FormData(FormBody);
+        $.ajax({
+            url:DictionaryValueGet.IPAddress+'/ycManager/save',
+            type : "POST",
+            processData: false,
+            contentType: false,
+            data:FormDataQuery,
+            xhr: function(){
+                var xhr = $.ajaxSettings.xhr();
+                if(onprogress && xhr.upload) {
+                    xhr.upload.addEventListener("progress" , onprogress, false);
+                    return xhr;
+                }
+            },
+            success : function(data) {
+                console.log(data.status)
+                if(data.status===1){
+                    $.toast({
+                        text: '修改成功',
+                        icon: 'success',
+                        bgColor: '#00a65a',
+                        textColor: 'white',
+                        position:'mid-center',
+                        afterHidden: function () {
+                            window.location.href ='wagf.html?pageNumber='+pageObj.pageNumber;
+                        }
+                    })
+                }else{
+                    alert(data.errMsg)
+                }
+            }
+        })
+    }
+
+</script>
+</body>
+</html>

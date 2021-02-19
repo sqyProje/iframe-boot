@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>官方活动编辑</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">官方活动添加</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <input type="hidden" name="classifyCode" value="GFHD"/>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>图片：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv">
+                            <div class="addImages">
+                                <input type="file" class="file textNone" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                <div class="text-detail">
+                                    <span>+</span>
+                                    <div>点击上传</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>封面：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv">
+                            <div class="addImages">
+                                <input type="file" class="file textNone" name="image2" id="image2" accept="image/png, image/jpeg, image/gif, image/jpg" />
+                                <div class="text-detail">
+                                    <span>+</span>
+                                    <div>点击上传</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>视频：</label>
+                    <div class="col-sm-10">
+                        <div class="picDiv">
+                            <div class="addImages">
+                                <input type="file" class="file textNone" name="video" id="video" accept="video/*"/>
+                                <div class="text-detail">
+                                    <span>+</span>
+                                    <p>点击上传</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">副标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="subTitle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">地址：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm" name="address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>购买价格：</label>
+                    <div class="col-sm-1">
+                        <input type="number" class="form-control input-sm textNone" name="generalBuyPrice" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">难易程度：</label>
+                    <div class="col-sm-1">
+                        <input type="number"  class="form-control input-sm" name="difficulteDegree" min="0.0">
+                    </div>
+                    <label class=" col-sm-1 control-label">活动类型：</label>
+                    <div class="col-sm-1">
+                        <select name="subClassifyCode" class="form-control input-sm" >
+                            <option value="XSSS">线上赛事</option>
+                            <option value="XXHD">线下活动</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">是否VIP：</label>
+                    <div class="col-sm-1">
+                        <select name="isVipResource" class="form-control input-sm">
+                            <option value="false">否</option>
+                            <option value="true">是</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">播放次数：</label>
+                    <div class="col-sm-1">
+                        <input  class="form-control input-sm" name="playTimes">
+                    </div>
+                    <label class=" col-sm-1 control-label">演出时间：</label>
+                    <div class="col-sm-1">
+                        <input  class="form-control input-sm" name="showTime">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>简介：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control" name="introduction " rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">嘉宾：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control" name="guest" rows="4"></textarea>
+                        <span>多个嘉宾用逗号分开（周杰伦，罗志祥）</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='Official.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="DictionaryValueGet.ajaxForm('添加','Official','ycManager')">保存</button>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script src="../js/fileupload.js"></script>
+<script>
+    $(function(){
+        $("input[name='showTime']").datepicker({
+            language: 'zh-CN', //语言
+            autoclose: true, //选择后自动关闭
+            clearBtn: true,//清除按钮
+            format: "yyyy-mm-dd"//日期格式
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>消息推送详情</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">消息推送详情</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>标题：</label>
+                    <div class="col-sm-5">
+                        <input class="form-control input-sm textNone" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">内容：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control input-sm" name="desc"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>推送地址：</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control input-sm textNone" name="pushUrl"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>状态：</label>
+                    <div class="col-sm-1">
+                        <select name="status"  class="form-control input-sm">
+                            <option value="">全部</option>
+                            <option value="0">未发送</option>
+                            <option value="1">已发送</option>
+                            <option value="2">发送失败</option>
+
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>推送时间：</label>
+                    <div class="col-sm-1">
+                        <input class="form-control input-sm textNone" name="pushTime" />
+                    </div>
+                    <label class=" col-sm-1 control-label"><span class="text-danger">*</span>创建时间：</label>
+                    <div class="col-sm-1">
+                        <input class="form-control input-sm textNone" name="createTime" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='notice.html?pageNumber='+pageObj.pageNumber">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script>
+$("input[name='title']").val(pageObj.title)
+$("textarea[name='desc']").val(pageObj.desc)
+$("textarea[name='pushUrl']").val(pageObj.pushUrl)
+$("select[name='status']").val(pageObj.status)
+$("input[name='createTime']").val(pageObj.createTime)
+$("input[name='pushTime']").val(pageObj.pushTime)
+</script>
+</body>
+</html>

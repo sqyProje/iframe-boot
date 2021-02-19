@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>用户管理编辑</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--pages use plugins please write there-->
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+        <div class="card-header">用户管理编辑</div>
+        <div class="card-body">
+            <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+                <input type="hidden" name="userId"/>
+                <div class="form-group ">
+                    <label class=" col-sm-1 control-label">头像：</label>
+                    <div class="col-sm-10 imageUrl">
+                        <img style="" src="../images/defaultimg.png" width="100" height="100">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">昵称：</label>
+                    <div class="col-sm-2">
+                        <input class="form-control input-sm" name="username" readonly>
+                    </div>
+                    <label class=" col-sm-1 control-label">手机号：</label>
+                    <div class="col-sm-2">
+                        <input class="form-control input-sm" name="phone" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">性别：</label>
+                    <div class="col-sm-2">
+                        <select name="sex" class="form-control input-sm" readonly>
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">认证用户：</label>
+                    <div class="col-sm-2">
+                        <select name="userAuth" class="form-control input-sm">
+                            <option value="0">未认证</option>
+                            <option value="1">企业认证</option>
+                            <option value="2">个人认证</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label" >账号类型：</label>
+                    <div class="col-sm-2">
+                        <select name="appType" class="form-control input-sm" readonly>
+                            <option value="1">APP</option>
+                            <option value="2">微信</option>
+                            <option value="3">微博</option>
+                            <option value="4">QQ</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">是否VIP：</label>
+                    <div class="col-sm-2">
+                        <select name="isVip" class="form-control input-sm">
+                            <option value="0">未开通</option>
+                            <option value="1">已开通</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label" >昵称状态：</label>
+                    <div class="col-sm-2">
+                        <select name="usernameUpdated" class="form-control input-sm" readonly>
+                            <option value="true">已修改</option>
+                            <option value="false">未修改</option>
+                        </select>
+                    </div>
+                    <label class=" col-sm-1 control-label">微信ID：</label>
+                    <div class="col-sm-2">
+                        <input name="weixinId" class="form-control input-sm" readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" col-sm-1 control-label">微博ID：</label>
+                    <div class="col-sm-2">
+                        <input name="weixinId" class="form-control input-sm" readonly/>
+                    </div>
+                    <label class=" col-sm-1 control-label">QQID：</label>
+                    <div class="col-sm-2">
+                        <input name="qqId" class="form-control input-sm" readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success  margin-r-10" type="button" onclick="window.location.href='user.html?pageNumber='+pageObj.pageNumber">返回</button>
+                        <button class="btn btn-primary" type="button" onclick="ajaxForm()">保存</button>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<script src="../js/fileupload.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:DictionaryValueGet.IPAddress+'/userManager/userDetail',
+            type:'post',
+            data:{userId:pageObj.userId},
+            dataType:'json',
+            success:function (result) {
+                $("input[name='userId']").val(result.user.userId)
+                $(".imageUrl img").attr('src',result.user.imageUrl)
+                $("input[name='username']").val(result.user.username);
+                $("input[name='phone']").val(result.user.phone);
+                $("select[name='sex']").val(result.user.sex);
+                $("select[name='appType']").val(result.user.appType);
+                $("select[name='isVip']").val(result.user.isVip);
+                $("select[name='userAuth']").val(result.user.userAuth);
+                $("select[name='usernameUpdated']").val(result.user.usernameUpdated);
+                $("input[name='weixinId']").val(result.user.weixinId);
+                $("select[name='weiboId']").val(result.user.weiboId);
+                $("input[name='qqId']").val(result.user.qqId);
+            }
+        })
+    });
+    function  ajaxForm() {
+        $.ajax({
+            url:DictionaryValueGet.IPAddress+'/userManager/modifyUserAuth',
+            type:'post',
+            data:{
+                userId:$("input[name='userId']").val(),
+                userAuth:$("select[name='userAuth'] option:selected").val(),
+                isVip:$("select[name='isVip'] option:selected").val()
+            },
+            dataType:'json',
+            success:function (result) {
+                if(result.status===1){
+                    $.toast({
+                        text: '编辑成功',
+                        icon: 'success',
+                        bgColor: '#00a65a',
+                        textColor: 'white',
+                        position:'mid-center',
+                        afterHidden: function () {
+                            window.location.href ='user.html?pageNumber='+pageObj.pageNumber;
+                        }
+                    })
+                }else{
+                    alert(data.errMsg)
+                }
+            }
+            })
+    }
+</script>
+</body>
+</html>

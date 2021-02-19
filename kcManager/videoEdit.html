@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>视频资源</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../js/toast/jquery.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../js/ie9/html5shiv.min.js"></script>
+    <script src="../js/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid p-t-15">
+    <div class="card">
+    <div class="card-header">视频资源编辑</div>
+    <div class="card-body">
+        <form class="form-horizontal" id="form-body" name="form-body" enctype="multipart/form-data" autocomplete="off"  >
+            <input type="hidden" name="videoUrl" value=""/> <input type="hidden" name="resourceKcId" value=""/>
+            <input type="hidden" name="id" value=""/>
+            <div class="form-group ">
+                <label class=" col-sm-1 control-label"><span class="text-danger">*</span>视频：</label>
+                <div class="col-sm-2">
+                    <div class="picDiv editPic">
+                        <div class="addImages">
+                            <video width="400" height="200" controls>
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg">
+                                您的浏览器不支持 video 标签。
+                            </video>
+                           <!-- <video src="" controls="controls" height="200" width="400"></video>-->
+                            <div class="text-detail btn-warning">
+                                <div>重新上传</div>
+                                <input type="file" class="file" name="video" id="video" accept="video/*" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class=" col-sm-1 control-label"><span class="text-danger">*</span>排序：</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control input-sm textNone" name="orderNum">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <button class="btn btn-success  margin-r-10"  type="button"  onclick="window.location.href='videoList.html?mainClassifyCode='
+                    +pageObj.mainClassifyCode+'&pageSource='+pageObj.pageSource+'&resourceId='+rowContent.resourceKcId">返回</button>
+                    <button class="btn btn-primary" type="button" onclick="addBannerAjaxForm()">保存</button>
+                </div>
+            </div>
+            <div id="progress"></div>
+            　<object id="videos" width="400" height="200" border="0" classid="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA">
+
+            　　<param name="ShowDisplay" value="0">
+
+            　　<param name="ShowControls" value="1">
+
+            　　<param  name="AutoStart" value="1">
+
+            　　<param name="AutoRewind" value="0">
+
+            　　<param name="PlayCount" value="0">
+
+            　　<param name="Appearancevalue="  value="0">
+
+            　　<param name="BorderStylevalue=" value="0">
+
+            　　<param name="MovieWindowHeight" value="240">
+
+            　　<param name="MovieWindowWidth" value="320">
+
+            　　<param name="FileName" value="http://39.97.173.220:82/kc_video/293126c6-0c07-4f43-a3c6-dc879391b6e7.avi">
+
+            　　<embed width="400" height="200 "border="0" showdisplay="0" showcontrols="1" autostart="1"
+                     autorewind="0" playcount="0" moviewindowheight="240" moviewindowwidth="320" filename="/Mbar.avi"
+                     src="http://39.97.173.220:82/kc_video/293126c6-0c07-4f43-a3c6-dc879391b6e7.avi">
+
+            　　</embed>
+
+            　　</object>
+        </form>
+    </div>
+</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--pages use plugins please write there-->
+<script src="../js/bootstrap-table/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<script src="../js/toast/jquery.toast.js"></script>
+<script src="../js/bootbox.min.js"></script>
+<script src="../js/fileupload.js"></script>
+<script src="../js/dictionaryValue.js"></script>
+<!--
+<script src="../js/video.js"></script>
+-->
+
+<script>
+    var rowContent=JSON.parse(pageObj.rowContent)
+    $("input[name='resourceKcId']").val(rowContent.resourceKcId)
+    $("input[name='orderNum']").val(rowContent.orderNum)
+    $("input[name='videoUrl']").val(rowContent.videoUrl)
+    $("input[name='id']").val(rowContent.id)
+    $(".addImages video").attr('src',rowContent.videoUrl)
+    //pv_m(rowContent.videoUrl,400,200)
+   // $(".addImages video source").attr('src',rowContent.videoUrl)
+    function  addBannerAjaxForm() {
+        var textNone = $(".textNone");
+        var flag = true;
+        for(var i=0; i<textNone.length; i++){
+            if($(textNone[i]).val() === ""){
+                flag = false;
+                alert("*必填项不能为空")
+                break ;
+            }
+        }
+        if(flag == true ) {
+            var FormBody = $("#form-body")[0];
+            var FormDataQuery = new FormData(FormBody);
+            $.ajax({
+                url: DictionaryValueGet.IPAddress + '/kcManager/saveVideo',
+                type: "POST",
+                processData: false,
+                contentType: false,
+                data: FormDataQuery,
+                xhr: function () {
+                    var xhr = $.ajaxSettings.xhr();
+                    if (onprogress && xhr.upload) {
+                        xhr.upload.addEventListener("progress", onprogress, false);
+                        return xhr;
+                    }
+                },
+                success: function (data) {
+                    if (data.status === 1) {
+                        $.toast({
+                            text: '编辑成功',
+                            icon: 'success',
+                            bgColor: '#00a65a',
+                            textColor: 'white',
+                            position: 'mid-center',
+                            afterHidden: function () {
+                               window.location.href='videoList.html?pageSource='+pageObj.pageSource+'&mainClassifyCode='
+                                   +pageObj.mainClassifyCode+'&resourceId='+rowContent.resourceKcId
+                            }
+                        })
+                    } else {
+                        alert(data.errMsg)
+                    }
+                }
+            })
+        }
+    }
+</script>
+</body>
+</html>
